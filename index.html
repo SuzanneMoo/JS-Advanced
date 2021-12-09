@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function StudentDetails(name, adress, phone, course) {
+            this.name = name
+            this.adress = adress
+            this.phone = phone
+            this.course = course
+
+            this.getInfo = function () {
+                return "Name: " + this.name + "\n" +
+                    "Adress: " + this.adress + "\n" +
+                    "Phone: " + this.phone + "\n" +
+                    "Course: " + this.course;
+            }
+        }
+       
+            let student1 = new StudentDetails("Anna Henz", "260-C North El Camino Real", "213-555-0539", "Math")
+            let student2 = new StudentDetails("Mike Wright", "591 Grand Avenue", "213-555-0180", "Chemistry")
+            let student3 = new StudentDetails("Italo Ferreira", "6123 Sunrise Blvd", "213-555-0982", "Literature")
+
+            let student1Details = student1.getInfo()
+            let student2Details = student2.getInfo()
+            let student3Details = student3.getInfo()
+
+            console.log(student1Details + "\n" + "\n" + student2Details + "\n" + "\n" + student3Details)
+            
+console.log(StudentDetails.prototype.getInfo)
+console.log(student2.__proto__ === StudentDetails.prototype)
+console.log(Object.getPrototypeOf(student1) === StudentDetails.prototype)
+
+
+    </script>
+</body>
+
+</html>     
+
+
